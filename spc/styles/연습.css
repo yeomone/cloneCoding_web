@@ -1,0 +1,56 @@
+header {font-size: 1rem;}
+header h1 {}
+header h1 a {}
+header h1 a img {}
+header nav {}
+header nav .active {color: #36b4e5;}
+header nav a {}
+header .lnb {}
+header .lnb a {}
+/* main */
+main {text-align: center;}
+main .path {
+    padding: 1.25rem 0;
+    background-color: #f1f1f1;
+    text-align: right;
+    border: #aaa;
+}
+/* main .path .skip {} < 필요없음 */
+main .path .skip dd {}
+main .path .skip dd a {}
+main .path .skip dd em {}
+main h1 {font-size: 2.5rem;}
+main p {}
+main .bg {}
+main .bg p {}
+main .bg .vision {}
+main .bg .vision h2 {
+    font-size: 1.313rem;
+    color: #36b4e5;
+}
+main .bg .vision p {font-size: 1.938rem;}
+main .bg .goal_strategy {}
+main .bg .goal_strategy h2 {font-size: 1.313rem;}
+main .bg .goal_strategy ul {display: inline-block;}
+main .bg .goal_strategy ul .first {
+    font-size: 1.5rem;
+    background-color: #36b4e5;
+}
+main .bg .goal_strategy ul li {
+    font-size: 1.5rem;
+    background-color: #fff;
+}
+main .bg .goal_strategy ul .last {
+    font-size: 1.5rem;
+    background-color: #f3c300;
+}
+main .bg .goal_strategy ul li h3 {font-size: 1.125rem;}
+main .bg .goal_strategy ul li p {}
+footer {}
+footer .top {}
+footer .top .left {}
+footer .top .left a {}
+footer .top .right {}
+footer .top .right a {}
+footer address {}
+footer .copyright {}
