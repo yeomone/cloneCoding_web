@@ -1,13 +1,27 @@
 /* header */
-header {}
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 150px;
+}
 header h1 {}
 header h1 a {}
-header h1 a img {}
+header h1 a img {
+    width: 60px; height: 70px;
+}
 header nav {}
-header nav a {}
-header nav a .active {}
+header nav a {
+    padding-right: 20px;
+}
+header nav a:last-child {padding-right: 0;}
+header nav .active {
+    color: #36b4e5;
+}
 header .lnb {}
 header .lnb a {}
+header .lnb a:last-child {padding-left: 20px;}
 /* main */
 main {text-align: center;}
 main .path {
@@ -77,11 +91,28 @@ main .goal_strategy ul li.last {background-color: #f3c300;}
 main .goal_strategy ul li h3 {font-size: 1.125rem;}
 main .goal_strategy ul li p {line-height: 1.5;}
 /* footer */
-footer {}
-footer .top {}
+footer {
+    padding: 50px 150px;
+}
+footer .top {    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
 footer .top .left {}
-footer .top .left a {}
+footer .top .left a {
+    font-weight: 700;
+    padding-right: 30px;
+    display: inline-block;
+}
 footer .top .right {}
-footer .top .right a {}
-footer address {}
+footer .top .right a {
+    border: 1px solid #ccc;
+    padding: 5px 20px;
+}
+footer address {
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
 footer .copyright {}
