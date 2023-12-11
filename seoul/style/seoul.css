@@ -1,0 +1,86 @@
+/* header */
+header {}
+header .gnb {
+    width: 1151px; height: 48px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+header .gnb nav {}
+header .gnb nav a {margin-right: 16px; font-size: 0.875rem;}
+header .gnb nav a:last-child {margin-right: 0;}
+header .gnb nav a img {}
+/* header-gnb */
+header .gnb .lnb {}
+header .gnb .lnb a {margin-left: 16px; font-size: 0.875rem;}
+header .gnb .lnb a:first-child {margin-left: 0;}
+/* header-bottom */
+header .bottom {
+    width: 1151px; height: 119px; margin: 0 auto;
+    /* h1, searchFrm, right 정렬 대상의 부모 flex 대상 */
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .bottom h1 {}
+header .bottom h1 a {}
+header .bottom h1 a img {}
+header .bottom #searchFrm {}
+header .bottom #searchFrm fieldset {
+    width: 370px; height: 47px;
+    border: 3px solid #1e6cb3;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 13px 0 21px;
+}
+header .bottom #searchFrm fieldset #search {
+    width: 300px; outline: none;
+}
+header .bottom #searchFrm fieldset #search::placeholder {color: #1e6cb3;}
+header .bottom #searchFrm fieldset #searchBtn {
+    width: 24px; height: 24px;
+}
+header .bottom #searchFrm fieldset #searchBtn img {}
+header .bottom .right {}
+header .bottom .right #langFrm {float: right;}
+header .bottom .right #langFrm fieldset {}
+header .bottom .right #langFrm fieldset #language {
+    width: 98px; height: 28px;
+    border: 1px solid #1e6cb3;
+    background-color: #fff;
+    font-size: 0.813rem;
+    padding-left: 10px;
+}
+header .bottom .right #langFrm fieldset #language option {}
+header .bottom .right #langFrm fieldset #goBtn {
+    width: 28px; height: 28px;
+    background-color: #1e6cb3;
+    color: #fff;
+    font-size: 0.813rem;
+    font-weight: 700;
+}
+header .bottom .right .weather {clear: both;}
+header .bottom .right .weather p {font-size: 0.813rem;}
+header .bottom .right .weather .currentWeather {
+    font-weight: 700; font-size: 1.5rem;
+    letter-spacing: -0.48px; padding: 5px 0;
+}
+/* main1행 */
+/* main1행-banner */
+/* main1행-right(코로나, 교통정보) */
+/* main2행-주요서비스 */
+/* main3행-배너3 */
+/* main4행-게시판 */
+/* main4행-게시판-이벤트신청 */
+/* main4행-게시판-이달행사축제 */
+/* main4행-게시판-서비스 */
+/* main5행-분야정보 */
+/* main6행-새소식 */
+/* footer */
+/* footer1행 */
+/* footer2행 */
