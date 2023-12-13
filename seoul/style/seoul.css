@@ -71,10 +71,117 @@ header .bottom .right .weather .currentWeather {
     letter-spacing: -0.48px; padding: 5px 0;
 }
 /* main1행 */
+main {}
+main > * {width: 1151px; margin: 0 auto;}
 /* main1행-banner */
+main .visualBnr {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+}
+main .visualBnr .leftBnr {
+    background-color: tomato;
+    width: 770px;
+    position: relative;
+}
+main .visualBnr .leftBnr a {}
+main .visualBnr .leftBnr a img {}
+main .visualBnr .leftBnr .close {
+    width: 52px; height: 28px;
+    font-size: 0.813rem;
+    padding: 5px 9px;
+    background-color: #1e6cb3;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    right: 15px; bottom: 15px;
+}
 /* main1행-right(코로나, 교통정보) */
+main .visualBnr .rightBnr {
+    background-color: pink;
+    width: 360px;
+}
+main .visualBnr .rightBnr .corona {
+    position: relative;
+    display: block;
+}
+main .visualBnr .rightBnr .corona a {}
+main .visualBnr .rightBnr .corona a img {}
+main .visualBnr .rightBnr .corona a .date {
+    background-color: lightcoral;
+    display: inline-block;
+    font-size: 0.813rem;
+    position: absolute;
+    top: 14px; right: 20px;
+}
+main .visualBnr .rightBnr .corona a .data {
+    /* 공통된 값 */
+    background-color: lightcoral;
+    font-size: 0.813rem;
+    position: absolute;
+    text-align: center;
+}
+main .visualBnr .rightBnr .corona a .data:nth-child(3) {
+    width: 140px; top: 84px; left: 30px;
+} /*확진자*/
+main .visualBnr .rightBnr .corona a .data:nth-child(4) {
+    width: 140px; top: 84px; right: 29px;
+} /*추가확진자*/
+main .visualBnr .rightBnr .corona a .data:nth-child(5) {
+    width: 94px; bottom: 58px; left: 30px;
+} /*퇴원*/
+main .visualBnr .rightBnr .corona a .data:nth-child(6) {
+    width: 94px; bottom: 58px; left: 145px;
+} /*추가퇴원*/
+main .visualBnr .rightBnr .corona a .data:nth-child(7) {
+    width: 59px; bottom: 58px; right: 32px;
+} /*사망*/
+main .visualBnr .rightBnr .traffic {}
+main .visualBnr .rightBnr .traffic img {margin-top: 10px;}
 /* main2행-주요서비스 */
+main .serviceBnr {
+    background-color: green;
+}
+main .serviceBnr .title {
+    background-color: cadetblue;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 15px 0;
+    position: relative;
+}
+main .serviceBnr .title h1 {
+    font-size: 1.5rem; font-weight: 700;
+}
+main .serviceBnr .title .site {
+    position: absolute;
+    right: 0;
+}
+main .serviceBnr .contents {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+}
+main .serviceBnr .contents a {
+    display: flex;
+    /* a한테 display: flex를 적용하면 block을 쓴 것과 같은 의미로 적용된다. */
+    flex-flow: column nowrap;
+    width: 9.09%; text-align: center;
+}
+main .serviceBnr .contents a img {
+    width: 60px; margin: 0 auto;
+}
+main .serviceBnr .contents a span {font-size: 0.813rem;}
 /* main3행-배너3 */
+main .bnrBg {
+    background-color: #eff4f8;
+    width: 1920px;
+}
+main .bnrBg .bnr {
+    width: 1151px; margin: 0 auto;
+    display: flex;
+}
+main .bnrBg .bnr a {display: block;}
+main .bnrBg .bnr a img {}
 /* main4행-게시판 */
 /* main4행-게시판-이벤트신청 */
 /* main4행-게시판-이달행사축제 */
