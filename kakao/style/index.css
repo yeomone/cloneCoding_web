@@ -15,30 +15,77 @@ header nav a:last-child {margin-right: 0;}
 header .recruitment {color: #fff;}
 header .recruitment .fa-circle-chevron-right {color: #17a2b8;}
 /* main */
-main {}
-main .visual {}
-main .visual video {}
-main .visual .logo {}
+main {background-color: #f1f1f1; padding-bottom: 40px;}
+main .visual {
+    height: 650px; overflow: hidden; position: relative; background-color: aqua;
+}
+main .visual video {width: 100%;}
+main .visual .logo {
+    z-index: 100;
+    position: absolute; left: 0; top: 25%;
+    width: 100%; text-align: center;
+}
 main .visual .logo img {}
+main .board, main .gallery {
+    max-width: 1200px; margin: 40px auto 0;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+}
+main .board a, main .gallery a {
+    background-color: #fff; display: block;
+    border-radius: 2px; width: calc(100% / 3 - 40px / 3);
+    padding: 20px 20px;
+}
 main .board {}
 main .board a {}
-main .board a .category {}
-main .board a h2 {}
-main .board a .contents {}
+main .board a:first-child .contents {color: #777;}
+main .board a .category {margin-bottom: 5px;}
+main .board a h2 {
+    font-size: 1.5rem; font-weight: bold; line-height: 1.5; letter-spacing: -2px;
+}
+main .board a:first-child h2 {padding-bottom: 60px;}
+main .board a .contents {line-height: 1.7;}
+main .board a .contents:nth-child(3) {}
 main .gallery {}
 main .gallery a {}
-main .gallery a .category {}
+main .gallery a .category {margin-bottom: 5px;}
 main .gallery a .photo {}
-main .gallery a .photo img {}
-main .gallery a .contents {}
-main .gallery a h2 {}
+main .gallery a .photo img {width: 100%; margin-bottom: 20px;}
+main .gallery a .contents {color: #777; line-height: 1.7;}
+main .gallery a h2 {font-size: 1.5rem; font-weight: bold; line-height: 1.5; letter-spacing: -0.2px;}
 /* footer */
-footer {}
-footer .top {}
+footer {border-top: 1px solid #777; padding: 40px 0;}
+footer .top, footer address { max-width: 1200px; margin: 0 auto;}
+footer .top {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; padding: 15px 0;
+    align-items: center; 
+}
 footer .top .f_nav {}
 footer .top .f_nav a {}
-footer .top .site {}
-footer .top .site > a {}
-footer .top .site .sub {}
-footer .top .site .sub a {}
-footer address {}
+footer .top .f_nav a::after {
+    content: ''; /*필수*/
+    display: inline-block;
+    width: 1px; height: 12px;
+    background-color: #aaa;
+    margin: 0 4px 0 7px;
+}
+footer .top .f_nav a:last-child::after {display: none;}
+footer .top .site {position: relative;}
+/* site에 마우스 올리면(hover) 자식 sub가 보인다 (none -> block)*/
+/* 처음 sub에 flex를 적용했다면 (none -> flex) */
+footer .top .site:hover .sub {display: flex;}
+footer .top .site > a {
+    background-color: #333; border-radius: 3px; padding: 7px 13px; color: #fff; display: block; 
+}
+footer .top .site .sub {
+    display: flex; flex-flow: column nowrap;
+    /* justify-content: flex-end; */
+    background-color: lime; border-radius: 5px;
+    width: 190px; border: 1px solid #777;
+    position: absolute; bottom: 33px; right: 0;
+    display: none;/*초기 숨기기*/
+}
+footer .top .site .sub a {padding: 13px 13px; border-bottom: 1px solid #777;}
+/* footer .top .site .sub a:last-child {border-bottom: none;} */
+footer address {color: #777; line-height: 1.7;}

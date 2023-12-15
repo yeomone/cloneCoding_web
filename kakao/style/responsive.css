@@ -1,5 +1,26 @@
+@media screen and (max-width:1200px) {
+    main .visual {height: 500px;}
+    main .visual .logo img {height: 200px;}
+}
+@media screen and (max-width:900px) {
+    main .visual {height: 400px;}
+}
 @media screen and (max-width:769px) {
     header h1 a img {width: 100px;}
     header nav a {font-size: 0.875rem; margin-right: 10px;}
     header .recruitment {display: none;}
-}
+    main .visual video {display: none;}
+    main .visual {background-image: url(../images/m_bg.jpg); background-position: center; background-size: cover;
+    }
+    main .visual .logo img {height: 150px;}
+    main .board, main .gallery {
+        display: flex; flex-flow: column nowrap;
+        align-items: center;
+    }
+    main .board a, main .gallery a {width:calc(100% - 40px); margin-bottom: 20px;} 
+    /* footer */
+    footer .top {flex-flow: column nowrap;}
+    footer .top .site {margin-top: 20px;}
+    footer .top .site .sub {right: -33px;}
+    footer address { padding: 0 5%;}
+}/* 769 end */
