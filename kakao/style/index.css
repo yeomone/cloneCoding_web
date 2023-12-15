@@ -1,3 +1,4 @@
+* {transition: all 0.8s;}
 /* header */
 header {
     padding: 0 20px; height: 60px;
@@ -17,8 +18,7 @@ header .recruitment .fa-circle-chevron-right {color: #17a2b8;}
 /* main */
 main {background-color: #f1f1f1; padding-bottom: 40px;}
 main .visual {
-    height: 650px; overflow: hidden; position: relative; background-color: aqua;
-}
+    height: 650px; overflow: hidden; position: relative;}
 main .visual video {width: 100%;}
 main .visual .logo {
     z-index: 100;
