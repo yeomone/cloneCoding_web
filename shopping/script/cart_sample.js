@@ -44,7 +44,7 @@ price_info.addEventListener('click', function(){
 // 2. i 클릭 시 팝업 출력
 // 3. X 클릭 시 팝업 닫히기
 
-const benefit_shipping_info = item_detail.querySelector('.benefit_shipping i[class$=info')
+const benefit_shipping_info = item_detail.querySelector('.benefit_shipping i[class$=info]')
 const benefit_shipping_info_open = item_detail.querySelector('.benefit_shipping .open')
 const close = benefit_shipping_info_open.querySelector('.close')
 
@@ -54,4 +54,24 @@ benefit_shipping_info.addEventListener('click', function(){
 })
 close.addEventListener('click', function(){
     benefit_shipping_info_open.style.display = 'none';
+})
+
+// 목표) 배송 1/9 (화) 도착 예정 94% 메뉴를 클릭하면 메뉴 펼침 정보 나타나기
+// 1. 펼침 메뉴 초기 숨기기
+// 2. 배송1/9(화) 도착 예정 94% 메뉴 클릭 시 
+// 3. 위(1)의 둥근 모서리 하단 모양 뾰족하게 변경
+// 4. 위(1)의 94% 옆 화살표 상하 반전 하기
+// 5. 메뉴 펼침 정보 보이기
+
+const delivery_menu = item_detail.querySelector('.delivery_menu')
+const delivery_menu_open = item_detail.querySelector('.delivery_menu_open')
+const delivery_list = delivery_menu_open.querySelector('.list')
+const delivery_menu_down = delivery_menu.querySelector('i[class$=down]')
+
+delivery_menu_open.style.display = 'none';
+delivery_menu.addEventListener('click',function(){
+    delivery_menu_open.style.display = 'flex';
+    delivery_menu.style.borderBottomRightRadius = '0';
+    delivery_menu.style.borderBottomLeftRadius = '0';
+    delivery_menu_down.style.transform = 'scaleY(-1);'
 })
