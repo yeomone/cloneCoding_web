@@ -73,5 +73,5 @@ delivery_menu.addEventListener('click',function(){
     delivery_menu_open.style.display = 'flex';
     delivery_menu.style.borderBottomRightRadius = '0';
     delivery_menu.style.borderBottomLeftRadius = '0';
-    delivery_menu_down.style.transform = 'scaleY(-1);'
+    delivery_menu_down.style.transform = 'scaleY(-1)';
 })
