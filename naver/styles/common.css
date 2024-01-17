@@ -1,6 +1,6 @@
 /* 통합 common css */
 /* all */
-#login_wrap {background-color: aqua; max-width: 743px; position: relative; margin: 0 auto;}
+#login_wrap { max-width: 743px; position: relative; margin: 0 auto;}
 #login_wrap #lang_select {
     position: absolute; right: 0; top: 20[x];
     width: 95px; border: 1px solid #ccc; padding: 7px;
