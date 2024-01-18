@@ -22,7 +22,7 @@
 /* footer */
 #login_wrap footer {padding: 50px 0 30px;}
 #login_wrap footer .f_menu {padding-bottom: 10px;}
-#login_wrap footer .f_menu a {color: #888; margin-right: 8px;}
+#login_wrap footer .f_menu a {color: #888; margin-right: 8px; font-size: 0.75rem;}
 #login_wrap footer .f_menu a:last-child:after {display: none;}
 #login_wrap footer .f_menu a::after {
     content: ''; display: inline-block;
