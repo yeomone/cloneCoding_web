@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * {list-style: none; margin: 0; padding: 0;}
+        header {
+            background: aqua; width: 800px; height: 50px; margin: 50px auto;
+        }
+        header nav {}
+        header nav .gnb {}
+        header nav .gnb > li {}
+        header nav .gnb > li > a {}
+        header nav .gnb > li > .lnb {}
+        header nav .gnb > li > .lnb > li {}
+        header nav .gnb > li > .lnb > li > a {}
+    </style>
+    <title>nav_jquery</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="gnb">
+                <li><a href="#">gnb1</a></li>
+                <li><a href="#">gnb2</a>
+                    <ul class="lnb">
+                        <li><a href="#">lnb1</a></li>
+                        <li><a href="#">lnb2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">gnb3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        $('.lnb').hide()
+        $('.gnb > li').on('mouseover',function(){
+            $('.lnb').stop().slideDown();
+        })
+        $('.gnb > li').on('mouseout',function(){
+            $('.lnb').stop().slideUp();
+        })
+    </script>
+</body>
+</html>

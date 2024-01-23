@@ -1,0 +1,21 @@
+main {}
+main .visual {height: 900px; overflow: hidden;}
+main .visual img {width: 100%;}
+main .txt {padding: 300px 0;}
+main .txt h1 {font-size: 5rem; font-weight: 800; text-align: center; opacity: 0;}
+main .info {margin-bottom: 300px; text-align: center; opacity: 0;}
+main .info img {width: 800px;}
+main .info1 {}
+main .info2 {}
+@keyframes opacity_scale {
+    0% {opacity: 0; transform: scale(1.2);}
+    100% {opacity: 1; transform: scale(1);}
+}
+@keyframes translate1 {
+    0% {opacity: 0; transform: translateX(200px);}
+    100% {opacity: 1; transform: translateX(0px);}
+}
+@keyframes translate2 {
+    0% {opacity: 0; transform: translateY(100px);}
+    100% {opacity: 1; transform: translateY(0px);}
+}

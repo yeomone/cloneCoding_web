@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3일간 이 창 보지않음</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body, html {background: cadetblue;}
+        #notice_popup {
+            width: 400px; height: 600px; border: 1px solid #222;
+            background: #fff; padding: 20px;
+            position: fixed; left: 50%; transform: translateX(-50%);
+            display: flex; flex-flow: column nowrap;
+            justify-content: space-between;
+        }
+        #notice_popup .contents {}
+        #notice_popup .contents h1 {}
+        #notice_popup .contents p {}
+        #notice_popup .close_wrap {}
+        #notice_popup .close_wrap #chk {}
+        #notice_popup .close_wrap label {}
+        #notice_popup .close_wrap label #close_btn {}
+    </style>
+</head>
+<body>
+    <div id="notice_popup">
+        <div class="contents">
+            <h1>이벤트제목</h1>
+            <p>이벤트내용</p>
+            <p>이벤트내용</p>
+            <p>이벤트내용</p>
+            <p>이벤트내용</p>
+        </div>
+        <p class="close_wrap">
+            <input type="checkbox" name="chk" id="chk">
+            <label for="chk">
+                3일동안 이 창 열지 않기
+                <button type="button" id="close_btn">닫기</button>
+            </label>
+        </p>
+    </div>
+    <script>
+        
+        // chk 선택된 상태로 닫기를 클릭하면 3일동안 보지 않음 활성화
+        // chk 선택해제된 상태로 닫기를 클릭하면 3일동안 보지 않음 비활성화
+        $('#close_btn').on('click',function(){
+            if($('#chk').is(':checked')){
+                console.log('checked true')
+                $.cookie('popup','none',{expires:3, path:'/'})
+                // $.cookie('popup','none',{안보이는 일 수 입력, 경로})
+                $('#notice_popup').fadeOut('fast')
+            }
+        })
+
+        if($.cookie('popup')=='none'){
+            $('#notice_popup').hide()
+        }
+
+    </script>
+</body>
+</html>

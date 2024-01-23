@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getBounding1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        body, html{height: 300vh;}
+        #result {
+            background: aqua;
+            position: relative; top: 300px;
+        }
+        .bg {height: 100vh; opacity: 0;}
+        .bg1 {background: cadetblue; opacity: 1;}
+        .bg2 {background: pink;}
+        .bg3 {background: coral;}
+        .bg4 {background: green;}
+        /* 스크롤 위치에 따라 등장 시 적용되는 animation */
+        @keyframes opacity {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <p id="result">RESULT</p>
+    <main>
+        <div class="bg bg1"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <div class="bg bg4"></div>
+    </main>
+    <script>
+        const result = document.querySelector('#result')
+        console.log(`result의 위치1=>${result.offsetTop}`)
+        console.log(`result의 위치2=>${result.getBoundingClientRect().top}`)
+
+        const bg = document.querySelectorAll('.bg')
+        // 스크롤 했을 때 bg2가 보일 때쯤 animation opacity 적용
+        window.addEventListener('scroll',()=>{
+            console.log(bg[1].getBoundingClientRect().top)
+            if(bg[1].getBoundingClientRect().top <= 400){
+                bg[1].style.animation = 'opacity 1.5s both'
+            }
+            if(bg[2].getBoundingClientRect().top <= 400){
+                bg[2].style.animation = 'opacity 1s both'
+            }
+            if(bg[3].getBoundingClientRect().top <= 400){
+                bg[3].style.animation = 'opacity 0.5s both'
+            }
+        })
+        
+    </script>
+</body>
+</html>
